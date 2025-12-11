@@ -30,9 +30,7 @@ class GameClient:
             return None
 
     def parse_player_stats(self, data):
-        """
-        Шукає гравця у списку allPlayers, щоб дістати правильний CS.
-        """
+
         if not data:
             return 0, 0, 0
 
