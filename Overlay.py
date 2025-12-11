@@ -9,7 +9,7 @@ class Overlay:
         self.stats_logic = Stats()
 
         self.window = tk.Tk()
-        self.window.title("SeltECO Overlay")
+        self.window.title("SelfECO Overlay")
 
         window_width = 300
         window_height = 150
@@ -31,13 +31,13 @@ class Overlay:
                                    font=("Arial", 8))
         self.close_btn.pack(anchor="ne", padx=5, pady=5)
 
-        self.label_gpm = tk.Label(self.window, text="Waiting...", font=("Arial", 16, "bold"), fg="#FFD700", bg="black")
+        self.label_gpm = tk.Label(self.window, text="WAITing...", font=("Arial", 16, "bold"), fg="#FFD700", bg="black")
         self.label_gpm.pack(pady=5)
 
         self.label_cspm = tk.Label(self.window, text="---", font=("Arial", 14), fg="white", bg="black")
         self.label_cspm.pack(pady=5)
 
-        self.label_status = tk.Label(self.window, text="Init...", font=("Arial", 8), fg="gray", bg="black")
+        self.label_status = tk.Label(self.window, text="Iniiiit...", font=("Comic Sans", 8), fg="red", bg="black")
         self.label_status.pack(side="bottom", pady=5)
 
     def start_move(self, event):
@@ -71,8 +71,7 @@ class Overlay:
 
             self.label_gpm.config(text=gpm_text)
             self.label_cspm.config(text=f"CSPM: {cspm_val:.1f} (CS: {cs})")
-
-            self.label_status.config(text=f"Time: {time:.0f}s | OK", fg="green")
+#тут нема часу якщо когось бісить
         else:
             self.label_status.config(text="Searching for LoL...", fg="red")
 
