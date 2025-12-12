@@ -2,7 +2,7 @@ name: SelfECO
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main","master" ]
   pull_request:
     branches: [ "master","slave" ]
 
